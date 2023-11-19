@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #172a3a;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.8rem;
+  color: #09bc8a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: .85rem;
+}
+
+.turn {
+  color: #508991;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  background-color: #fff;
+  width: 300px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #508991;
+    background: none;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.restart {
+  width: 50%;
+  background-color: #09bc8a;
+  border: none;
+  padding: 1.1rem 0;
+  color: #fff;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: .25rem;
+}
+
+.restart:hover {
+  background-color: #172a3a;
+}
+
+.game-info {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+.game-info ol {
+  list-style: none;
+}
+
+.game-info ol button {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #508991;
+  cursor: pointer;
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  margin-bottom: .5rem;
+}
+
+.game-info ol button:hover {
+  background-color: #355f65;
 }
